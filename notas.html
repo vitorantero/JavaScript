@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    let score = 80
+
+    function getScore(score) {
+      let scoreA = score >= 90 && score <= 100
+      let scoreB = score >= 80 && score <= 89
+      let scoreC = score >= 70 && score <= 79
+      let scoreD = score >= 60 && score <= 69
+      let scoreE = score <= 60 && score >= 0
+
+      let scoreFinal
+
+      if (scoreA) {
+        scoreFinal = 'A'
+      } else if (scoreB) {
+        scoreFinal = 'B'
+      } else if (scoreC) {
+        scoreFinal = 'C'
+      } else if (scoreD) {
+        scoreFinal = 'D'
+      } else if (scoreE) {
+        scoreFinal = 'E'
+      } else {
+        scoreFinal = 'nota invalida'
+      }
+
+      return scoreFinal
+    }
+
+    console.log(getScore(40))
+  </script>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    let family = {
+      incomes: [2500, 3200, 250.45, 380.45],
+      expenses: [318.29, 167, 176, 880]
+    }
+
+    function sum(array) {
+      let total = 0
+
+      for (let value of array) {
+        total += value
+      }
+
+      return total
+    }
+
+    function calulateBalance() {
+      const calculateIncomes = sum(family.incomes)
+      const calculateExpenses = sum(family.expenses)
+
+      const total = calculateIncomes - calculateExpenses
+
+      const itsOk = total >= 0
+
+      let balanceText = 'negativo'
+
+      if (itsOk) {
+        balanceText = 'positivo'
+      }
+
+      console.log(`Seu saldo é ${balanceText}: ${total.toFixed(2)}R$`)
+    }
+
+    calulateBalance()
+  </script>
+</html>
